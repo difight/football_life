@@ -2,8 +2,8 @@ extends Human
 
 class_name Player
 
-func _init(_Age: int, _Name: String, _Surname: String).(_Age, _Name, _Surname):
-	print(.getAge())
+func _init(_age: int, _name: String, _surname: String).(_age, _name, _surname):
+	print(.getName())
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
