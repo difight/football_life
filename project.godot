@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Human",
+"class": "Character",
+"language": "GDScript",
+"path": "res://scripts/Сharacter.gd"
+}, {
 "base": "Node",
 "class": "Human",
 "language": "GDScript",
@@ -19,15 +24,28 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
 }, {
-"base": "Node",
-"class": "Specifications",
+"base": "Reference",
+"class": "SpecificationsHuman",
 "language": "GDScript",
-"path": "res://scripts/Specifications.gd"
+"path": "res://scripts/SpecificationsHuman.gd"
+}, {
+"base": "",
+"class": "SteamAPI",
+"language": "NativeScript",
+"path": "res://addons/steam_api/steam_api.gdns"
+}, {
+"base": "",
+"class": "SteamUserStats",
+"language": "NativeScript",
+"path": "res://addons/steam_api/steam_user_stats.gdns"
 } ]
 _global_script_class_icons={
+"Character": "",
 "Human": "",
 "Player": "",
-"Specifications": ""
+"SpecificationsHuman": "",
+"SteamAPI": "",
+"SteamUserStats": ""
 }
 
 [application]

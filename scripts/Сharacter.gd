@@ -1,6 +1,6 @@
 extends Human
 
-class_name Player
+class_name Character
 
 func _init(_age: int, _name: String, _surname: String, _specification: Dictionary).(_age, _name, _surname, _specification):
 	pass
@@ -10,6 +10,3 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

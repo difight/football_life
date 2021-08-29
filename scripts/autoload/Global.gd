@@ -1,5 +1,6 @@
 extends Node
 
+var GlobalCharacter: Character
 
 # Declare member variables here. Examples:
 # var a = 2

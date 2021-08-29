@@ -9,13 +9,15 @@ var Name: String setget ,getName
 var Surname: String setget ,getSurname
 var Nationality: String setget ,getNationality
 var Sex:int setget setSex
-var Specifications: Dictionary setget setSpecifications, getSpecifications
+var Specifications setget setSpecification, getSpecifications
 var Perks: Dictionary setget setPerks, getPerks
+var DateBorn: int setget setDateBorn, getDateBorn
 
-func _init(_age: int, _name: String, _surname: String):
+func _init(_age: int, _name: String, _surname: String, _specification: Dictionary):
 	self.Age = _age
 	self.Name = _name
 	self.Surname = _surname
+	self.Specifications = _specification
 
 func getAge() -> int:
 	return Age
@@ -35,10 +37,10 @@ func getNationality() -> String:
 func setSex(_sex:int) -> void:
 	Sex = _sex
 
-func setSpecifications(_specification: Dictionary) -> void:
-	Specifications = _specification
+func setSpecification(_specification: Dictionary) -> void:
+	Specifications = SpecificationsHuman.new(_specification)
 
-func getSpecifications() -> Dictionary:
+func getSpecifications() -> SpecificationsHuman:
 	return Specifications
 
 func setPerks(_perks: Dictionary) -> void:
@@ -46,6 +48,12 @@ func setPerks(_perks: Dictionary) -> void:
 
 func getPerks() -> Dictionary:
 	return Perks
+
+func setDateBorn(_dateborn:int) -> void:
+	DateBorn = _dateborn
+
+func getDateBorn() -> int:
+	return DateBorn
 
 # detected sex player
 func isMan() -> bool:
