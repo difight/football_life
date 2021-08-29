@@ -18,15 +18,22 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
+}, {
+"base": "Node",
+"class": "Specifications",
+"language": "GDScript",
+"path": "res://scripts/Specifications.gd"
 } ]
 _global_script_class_icons={
 "Human": "",
-"Player": ""
+"Player": "",
+"Specifications": ""
 }
 
 [application]
 
 config/name="Football"
+run/main_scene="res://scenes/Base.tscn"
 config/icon="res://icon.png"
 
 [autoload]
