@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Ability",
+"language": "GDScript",
+"path": "res://scripts/Ability.gd"
+}, {
 "base": "Human",
 "class": "Character",
 "language": "GDScript",
 "path": "res://scripts/Сharacter.gd"
+}, {
+"base": "Reference",
+"class": "CurrentAbilities",
+"language": "GDScript",
+"path": "res://scripts/CurrentAbilities.gd"
 }, {
 "base": "Node",
 "class": "Human",
@@ -40,7 +50,9 @@ _global_script_classes=[ {
 "path": "res://addons/steam_api/steam_user_stats.gdns"
 } ]
 _global_script_class_icons={
+"Ability": "",
 "Character": "",
+"CurrentAbilities": "",
 "Human": "",
 "Player": "",
 "SpecificationsHuman": "",
