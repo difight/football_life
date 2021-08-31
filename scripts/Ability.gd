@@ -5,9 +5,9 @@ const MAX_LEVEL = 100
 
 var name: String setget setName, getName
 var level: int = 0 setget setLevel, getLevel
-var experience: int = 0 setget setExperience, getExperience
+var experience: float = 0 setget setExperience, getExperience
 
-func _init(_name: String, _level:int, _experience: int) -> void:
+func _init(_name: String, _level:int, _experience: float) -> void:
 	self.name = _name
 	self.level = _level
 	self.experience = _experience
@@ -25,12 +25,16 @@ func setLevel(_level: int) -> void:
 
 func getLevel() -> int:
 	return level
+	
+func addExperience(_experience: int) -> void:
+	var addExperience = _experience/self.level
+	self.experience += addExperience
 
-func setExperience(_experience:int) -> void:
+func setExperience(_experience:float) -> void:
 	if _experience >= MAX_EXPERIENCE:
 		self.level += 1
-		_experience = 0
+		_experience = _experience - MAX_EXPERIENCE
 	experience = _experience
 
-func getExperience() -> int:
+func getExperience() -> float:
 	return experience

@@ -13,7 +13,7 @@ var Specifications setget setSpecification, getSpecifications
 var Perks: Dictionary setget setPerks, getPerks
 var DateBorn: int setget setDateBorn, getDateBorn
 
-func _init(_age: int, _name: String, _surname: String, _specification: Array):
+func _init(_age: int, _name: String, _surname: String, _specification: CurrentAbilities):
 	self.Age = _age
 	self.Name = _name
 	self.Surname = _surname
@@ -37,7 +37,7 @@ func getNationality() -> String:
 func setSex(_sex:int) -> void:
 	Sex = _sex
 
-func setSpecification(_specification: Array) -> void:
+func setSpecification(_specification: CurrentAbilities) -> void:
 	Specifications = SpecificationsHuman.new(_specification)
 
 func getSpecifications() -> SpecificationsHuman:

@@ -1,13 +1,9 @@
 class_name SpecificationsHuman
 
-const MAX_EXP = 100
+var Abilities:Dictionary = {}
 
-var Abilities:Array = []
-
-func _init(_specification: Array):
-	for ability in _specification:
-		Abilities.push_back(Ability.new(ability.name, ability.level, ability.experience))
-
-
-
+func _init(_specification: CurrentAbilities):
+	var list_ability = _specification.getAbilities()
+	for ability in list_ability:
+		Abilities[ability] = list_ability[ability]
 

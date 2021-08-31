@@ -1,23 +1,38 @@
 class_name CurrentAbilities
 
-const LoadAbilities: Array = [
+const RATING = "Rating"
+const SOCIABILITY = "Sociability"
+const DETERMINATION = "Determination"
+const HEALTH = "Health"
+const AGGRESSION = "Aggression"
+const HEIGHT = "Height"
+const WEIGHT = "Weight"
+
+const DefaultAbilities: Dictionary = {
 	# Рейтинг
-	{'name': 'Rating', 'level': 0, 'experience': 0},
+	RATING: {'level': 0, 'experience': 0},
 	# Общительнсть
-	{'name': 'Sociability', 'level': 0, 'experience': 0},
+	SOCIABILITY: {'level': 0, 'experience': 0},
 	# Решительность
-	{'name': 'Determination', 'level': 0, 'experience': 0},
+	DETERMINATION: {'level': 0, 'experience': 0},
 	# Здоровье
-	{'name': 'Health', 'level': 0, 'experience': 0},
+	HEALTH: {'level': 0, 'experience': 0},
 	# Агресия
-	{'name': 'Aggression', 'level': 0, 'experience': 0},
+	AGGRESSION: {'level': 0, 'experience': 0},
 	# Рост
-	{'name': 'Height', 'level': 0, 'experience': 0},
+	HEIGHT: {'level': 0, 'experience': 0},
 	# Рост
-	{'name': 'Weight', 'level': 0, 'experience': 0},
-]
+	WEIGHT: {'level': 0, 'experience': 0},
+}
 
-var CurrentAbilities:Array = []
+var CurrentAbilities:Dictionary = {}
 
-func _init(_abilities:Array = []) -> void:
-	
+func _init(_abilities:Dictionary = {}) -> void:
+	var cur = DefaultAbilities
+	if _abilities:
+		cur = Global.merge_dictionary(DefaultAbilities, _abilities)
+	for abil in cur:
+		CurrentAbilities[abil] = Ability.new(abil, cur[abil].level, cur[abil].experience)
+
+func getAbilities() -> Dictionary:
+	return CurrentAbilities
