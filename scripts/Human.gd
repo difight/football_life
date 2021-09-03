@@ -55,6 +55,15 @@ func setDateBorn(_dateborn:int) -> void:
 func getDateBorn() -> int:
 	return DateBorn
 
+func addAbility(_abilityName:String, _experience:int) -> void:
+	self.Specifications.Abilities[_abilityName].addExperience(_experience)
+	
+func getAbilityLevel(_abilityName:String) -> int:
+	return self.Specifications.Abilities[_abilityName].getLevel()
+
+func getAbilityExperience(_abilityName:String) -> int:
+	return self.Specifications.Abilities[_abilityName].getExperience()
+
 # detected sex player
 func isMan() -> bool:
 	if Sex == 0:
