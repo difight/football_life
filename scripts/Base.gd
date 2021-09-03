@@ -8,13 +8,13 @@ func _ready():
 		'Rating': {'level': 1, 'experience': 10}
 	})
 	Global.GlobalCharacter = Character.new(1, 'Test', 'Test', abil)
-	print('Before')
-	print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(CurrentAbilities.RATING))
-	print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(CurrentAbilities.RATING))
-	print('After')
-	Global.GlobalCharacter.addAbility(CurrentAbilities.RATING, 160)
-	print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(CurrentAbilities.RATING))
-	print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(CurrentAbilities.RATING))
+	#print('Before')
+	#print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(CurrentAbilities.RATING))
+	#print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(CurrentAbilities.RATING))
+	#print('After')
+	#Global.GlobalCharacter.addAbility(CurrentAbilities.RATING, 160)
+	#print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(CurrentAbilities.RATING))
+	#print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(CurrentAbilities.RATING))
 	pass # Replace with function body.
 
 

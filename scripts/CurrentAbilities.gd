@@ -10,19 +10,15 @@ const WEIGHT = "Weight"
 
 const DefaultAbilities: Dictionary = {
 	# Рейтинг
-	RATING: {'level': 0, 'experience': 0},
+	RATING: {'level': 1, 'experience': 0},
 	# Общительнсть
-	SOCIABILITY: {'level': 0, 'experience': 0},
+	SOCIABILITY: {'level': 1, 'experience': 0},
 	# Решительность
-	DETERMINATION: {'level': 0, 'experience': 0},
+	DETERMINATION: {'level': 1, 'experience': 0},
 	# Здоровье
-	HEALTH: {'level': 0, 'experience': 0},
+	HEALTH: {'level': 1, 'experience': 0},
 	# Агресия
-	AGGRESSION: {'level': 0, 'experience': 0},
-	# Рост
-	HEIGHT: {'level': 0, 'experience': 0},
-	# Рост
-	WEIGHT: {'level': 0, 'experience': 0},
+	AGGRESSION: {'level': 1, 'experience': 0},
 }
 
 var CurrentAbilities:Dictionary = {}
