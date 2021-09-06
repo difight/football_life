@@ -12,12 +12,14 @@ var Sex:int setget setSex
 var Specifications setget setSpecification, getSpecifications
 var Perks: Dictionary setget setPerks, getPerks
 var DateBorn: int setget setDateBorn, getDateBorn
+var Money: int setget setMoney, getMoney
 
-func _init(_age: int, _name: String, _surname: String, _specification: CurrentAbilities):
+func _init(_age: int, _name: String, _surname: String, _specification: CurrentAbilities, _money:int):
 	self.Age = _age
 	self.Name = _name
 	self.Surname = _surname
 	self.Specifications = _specification
+	self.Money = _money
 
 func getAge() -> int:
 	return Age
@@ -64,6 +66,12 @@ func getAbilityLevel(_abilityName:String) -> int:
 func getAbilityExperience(_abilityName:String) -> int:
 	return self.Specifications.Abilities[_abilityName].getExperience()
 
+func setMoney(_money: int):
+	var budget = Budget.new(_money)
+	Money = budget.money
+
+func getMoney():
+	return Money
 # detected sex player
 func isMan() -> bool:
 	if Sex == 0:

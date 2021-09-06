@@ -30,8 +30,9 @@ func _ready():
 func _on_pumping_pressed(_abilities:Array, _buttonpush:Button):
 	for ability in _abilities:
 		Global.GlobalCharacter.addAbility(ability['name'], ability['exp'])
-		
-		print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(ability['name']))
+		print('name = ', ability['name'])
+		print('level = ', Global.GlobalCharacter.getAbilityLevel(ability['name']))
 		print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(ability['name']))
+	_buttonpush.disabled = true
 	
 	pass # Replace with function body.
