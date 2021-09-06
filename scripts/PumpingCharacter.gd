@@ -15,7 +15,6 @@ var ListAction = {
 		]
 	}
 }
-
 func _ready():
 	for action in ListAction:
 		var newItem = PumpingCharacterItem.instance()
@@ -34,6 +33,5 @@ func _on_pumping_pressed(_abilities:Array, _buttonpush:Button):
 		
 		print('Rating level = ', Global.GlobalCharacter.getAbilityLevel(ability['name']))
 		print('Experience level = ', Global.GlobalCharacter.getAbilityExperience(ability['name']))
-	#_buttonpush.disabled = true
 	
 	pass # Replace with function body.
