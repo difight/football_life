@@ -2,7 +2,7 @@ extends Human
 
 class_name Player
 
-func _init(_age: int, _name: String, _surname: String, _specification: Dictionary).(_age, _name, _surname, _specification):
+func _init(_age: int, _name: String, _surname: String, _specification: CurrentAbilities).(_age, _name, _surname, _specification):
 	pass
 
 # Called when the node enters the scene tree for the first time.

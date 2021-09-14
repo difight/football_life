@@ -1,23 +1,26 @@
 class_name Team
 
 var Rating:int setget ,getRating 
+var Squad:Dictionary setget setSquad, getSquad
+var Name: String
+var LeagueId: int setget setLeagueId
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _init(_squad:Dictionary, _name: String, _leagueid: int):
+	self.Squad = _squad
+	self.Name = _name
+	self.LeagueId = _leagueid
 
 func getRating() -> int:
-	return calculateRating()
+	return Rating
 
 func calculateRating() -> int:
-	return 0
+	return self.Rating
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func setSquad(_squad:Dictionary):
+	Squad = _squad
+
+func getSquad() -> Dictionary:
+	return Squad
+
+func setLeagueId(_leagueId: int):
+	LeagueId = _leagueId

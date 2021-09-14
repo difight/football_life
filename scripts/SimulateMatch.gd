@@ -1,10 +1,10 @@
 class_name SimulateMatch
 
+var TeamHome: Team
+var TeamGuest: Team
 
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _init():
-	pass # Replace with function body.
+func _init(_teamhome:Team, _teamguest: Team):
+	self.TeamHome = _teamhome
+	self.TeamGuest = _teamguest
+	
 
