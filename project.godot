@@ -40,6 +40,11 @@ _global_script_classes=[ {
 "path": "res://scripts/Player.gd"
 }, {
 "base": "Reference",
+"class": "SimulateMatch",
+"language": "GDScript",
+"path": "res://scripts/SimulateMatch.gd"
+}, {
+"base": "Reference",
 "class": "SpecificationsHuman",
 "language": "GDScript",
 "path": "res://scripts/SpecificationsHuman.gd"
@@ -53,6 +58,11 @@ _global_script_classes=[ {
 "class": "SteamUserStats",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_user_stats.gdns"
+}, {
+"base": "Reference",
+"class": "Team",
+"language": "GDScript",
+"path": "res://scripts/Team.gd"
 } ]
 _global_script_class_icons={
 "Ability": "",
@@ -61,9 +71,11 @@ _global_script_class_icons={
 "CurrentAbilities": "",
 "Human": "",
 "Player": "",
+"SimulateMatch": "",
 "SpecificationsHuman": "",
 "SteamAPI": "",
-"SteamUserStats": ""
+"SteamUserStats": "",
+"Team": ""
 }
 
 [application]
